@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="1b1f170c-17be-4d11-810b-54a8ce44865f">
+  <Table name="Propiedad" />
+  <Table name="Visitas" />
+  <Table name="VisitasVisitaPro" />
+</Dependencies>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="29130224-dbb4-4fcd-af42-a5d870987d7b">
+  <Table name="Propiedad" />
+  <Table name="Alquiler" />
+</Dependencies>

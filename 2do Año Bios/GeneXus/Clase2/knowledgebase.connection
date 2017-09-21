@@ -1,0 +1,10 @@
+﻿<ConnectionInformation>
+	<DBName>GX_KB_Clase2</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>SPRITEBOY</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>C:\Models\Clase2</Directory>
+	<DataFile>GX_KB_Clase2.mdf</DataFile>
+	<LogFile>GX_KB_Clase2_log.ldf</LogFile>
+	<HostName>SPRITEBOY</HostName>
+</ConnectionInformation>

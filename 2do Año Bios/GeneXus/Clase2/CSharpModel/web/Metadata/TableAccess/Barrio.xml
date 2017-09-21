@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dependencies type="guid" guid="34a71be7-4668-43dc-9624-abd5d8068391">
+  <Table name="Barrio" />
+  <Table name="Propiedad" />
+</Dependencies>

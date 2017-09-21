@@ -1,0 +1,112 @@
+
+<ReorgSpec>
+<SpecVersion>15_0_6-116888</SpecVersion>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description></Table>
+<ReorgCls>c</ReorgCls>
+<ReorgCode>new</ReorgCode>
+<ReorgMsg>VisitasVisitaPro is new</ReorgMsg>
+<ReorgAction>*</ReorgAction>
+<TableAttributes>
+<AttrisInTable>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<OnPrimaryKey>Yes</OnPrimaryKey>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<OnPrimaryKey>Yes</OnPrimaryKey>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
+<AttrisNoLongerInTable></AttrisNoLongerInTable>
+<AttrisInManyTables></AttrisInManyTables></TableAttributes>
+<TableIndices>
+<Indices>
+<Index>
+<IndexName>IVISITASVISITAPRO</IndexName>
+<IndexType>u</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>IVISITASVISITAPRO1</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
+<FKConstraints>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>2</TableId>
+<TableName>Propiedad</TableName>
+<Description>Propiedad</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></Attributes></FKConstraint>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
+<Statements>
+<Statement>CREATE TABLE [VisitasVisitaPro] ([VisitasId]  smallint NOT NULL , [PropiedadId]  smallint NOT NULL , PRIMARY KEY([VisitasId], [PropiedadId])) </Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IVISITASVISITAPRO1] ON [VisitasVisitaPro] ([PropiedadId] )</Statement>
+<Statement>ALTER TABLE [VisitasVisitaPro] ADD CONSTRAINT [IVISITASVISITAPRO2] FOREIGN KEY ([VisitasId]) REFERENCES [Visitas] ([VisitasId])</Statement>
+<Statement>ALTER TABLE [VisitasVisitaPro] ADD CONSTRAINT [IVISITASVISITAPRO1] FOREIGN KEY ([PropiedadId]) REFERENCES [Propiedad] ([PropiedadId])</Statement></Statements>
+<NeedReorganizationProgram>False</NeedReorganizationProgram>
+<Warnings></Warnings>
+<Errors></Errors></ReorgSpec>

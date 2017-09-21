@@ -1,0 +1,14 @@
+CREATE TABLE [GXA0002] ([PropiedadId]  smallint NOT NULL , [PropiedadDescripcion]  char(50) NOT NULL , [PropiedadFoto]  VARBINARY(MAX) NOT NULL , [PropiedadFoto_GXI]  varchar(2048) NOT NULL , [PropiedadDireccion]  char(50) NOT NULL , [BarrioId]  smallint NOT NULL )
+Run conversion program for table Propiedad
+DROP TABLE [Propiedad]
+sp_rename '[GXA0002]', 'Propiedad'
+ALTER TABLE [Propiedad] ADD PRIMARY KEY([PropiedadId])
+CREATE NONCLUSTERED INDEX [IPROPIEDAD1] ON [Propiedad] ([BarrioId] )
+
+ALTER TABLE [Alquiler] ADD CONSTRAINT [IALQUILER1] FOREIGN KEY ([PropiedadId]) REFERENCES [Propiedad] ([PropiedadId])
+
+ALTER TABLE [VisitasVisitaPro] ADD CONSTRAINT [IVISITASVISITAPRO2] FOREIGN KEY ([VisitasId]) REFERENCES [Visitas] ([VisitasId])
+ALTER TABLE [VisitasVisitaPro] ADD CONSTRAINT [IVISITASVISITAPRO1] FOREIGN KEY ([PropiedadId]) REFERENCES [Propiedad] ([PropiedadId])
+
+ALTER TABLE [Propiedad] ADD CONSTRAINT [IPROPIEDAD1] FOREIGN KEY ([BarrioId]) REFERENCES [Barrio] ([BarrioId])
+

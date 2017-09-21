@@ -1,0 +1,221 @@
+
+<ObjectSpec>
+<SpecVersion>15_0_6-116888</SpecVersion>
+<Object>
+<ObjClsGuid>1db606f2-af09-4cf9-a3b5-b481519d28f6</ObjClsGuid>
+<ObjCls>0</ObjCls>
+<ObjId>4</ObjId>
+<ObjName>Visitas</ObjName>
+<ObjDesc>Visitas</ObjDesc>
+<ObjPgmName>Visitas</ObjPgmName>
+<ObjClsName>Transaction</ObjClsName></Object>
+<Result>genreq</Result>
+<Warnings></Warnings>
+<Errors></Errors>
+<Generator>
+<GenId>15</GenId>
+<GenName>Default (C#)</GenName></Generator>
+<FormClass>HTML</FormClass>
+<Parameters></Parameters>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>4</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description></Table></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></NavigationTree>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<DynamicLoads></DynamicLoads>
+<Rules></Rules>
+<AfterAttributeRules></AfterAttributeRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute>
+<Attribute>
+<AttriId>10</AttriId>
+<AttriName>VisitasFecha</AttriName>
+<Description>Visitas Fecha</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>10</AttriId>
+<AttriName>VisitasFecha</AttriName>
+<Description>Visitas Fecha</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<AfterInsertRules></AfterInsertRules>
+<AfterUpdateRules></AfterUpdateRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete></TablesToControlOnDelete>
+<Levels>
+<Level>
+<LevelType>Trn</LevelType>
+<LevelNumber>5</LevelNumber>
+<BaseTable>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description></Table></BaseTable>
+<NavigationTree>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description>
+<Updated>Yes</Updated>
+<RecordsToRead>many</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></KeyAttributes>
+<Tables>
+<Table>
+<TableId>2</TableId>
+<TableName>Propiedad</TableName>
+<Description>Propiedad</Description>
+<RecordsToRead>one</RecordsToRead>
+<KeyAttributes>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></KeyAttributes>
+<Tables></Tables></Table></Tables></Table></NavigationTree>
+<Formulas>
+<VerticalFormulas></VerticalFormulas>
+<AggSelFormulas></AggSelFormulas></Formulas>
+<DynamicLoads></DynamicLoads>
+<Rules></Rules>
+<AfterAttributeRules></AfterAttributeRules>
+<AfterConfirmRules></AfterConfirmRules>
+<TablesToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description></Table>
+<TableAction>insert</TableAction>
+<AttrisToUpdate>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description></Table>
+<TableAction>update</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate>
+<TableToUpdate>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description></Table>
+<TableAction>delete</TableAction>
+<AttrisToUpdate></AttrisToUpdate></TableToUpdate></TablesToUpdate>
+<AfterInsertRules></AfterInsertRules>
+<AfterUpdateRules></AfterUpdateRules>
+<AfterDeleteRules></AfterDeleteRules>
+<TablesToControlOnDelete></TablesToControlOnDelete>
+<Levels></Levels>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<AfterTrnRules></AfterTrnRules>
+<AfterLevelRules></AfterLevelRules></Level></Levels>
+<Prompts>
+<Prompt>
+<Table>
+<TableId>2</TableId>
+<TableName>Propiedad</TableName>
+<Description>Propiedad</Description></Table>
+<Object>
+<ObjClsGuid>c9584656-94b6-4ccd-890f-332d11fc2c25</ObjClsGuid>
+<ObjCls>13</ObjCls>
+<ObjId>8</ObjId>
+<ObjName>Gx0020</ObjName>
+<ObjPgmName>Gx0020</ObjPgmName>
+<ObjClsName>Web Panel</ObjClsName></Object>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>5</TableId>
+<TableName>VisitasVisitaPro</TableName>
+<Description>Visita Pro</Description></Table>
+<ProgramName>
+<Token>Gx0051</Token></ProgramName>
+<InputParameters>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt>
+<Prompt>
+<Table>
+<TableId>4</TableId>
+<TableName>Visitas</TableName>
+<Description>Visitas</Description></Table>
+<ProgramName>
+<Token>Gx0040</Token></ProgramName>
+<InputParameters></InputParameters>
+<OutputParameters>
+<Attribute>
+<AttriId>9</AttriId>
+<AttriName>VisitasId</AttriName>
+<Description>Visitas Id</Description></Attribute></OutputParameters>
+<PromptType>System</PromptType></Prompt></Prompts>
+<Suggests></Suggests></ObjectSpec>

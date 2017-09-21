@@ -1,0 +1,114 @@
+
+<ReorgSpec>
+<SpecVersion>15_0_6-116888</SpecVersion>
+<Table>
+<TableId>3</TableId>
+<TableName>Alquiler</TableName>
+<Description>Alquiler</Description></Table>
+<ReorgCls>c</ReorgCls>
+<ReorgCode>new</ReorgCode>
+<ReorgMsg>Alquiler is new</ReorgMsg>
+<ReorgAction>*</ReorgAction>
+<TableAttributes>
+<AttrisInTable>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>AlquilerId</AttriName>
+<Description>Alquiler Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<OnPrimaryKey>Yes</OnPrimaryKey>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>8</AttriId>
+<AttriName>AlquilerFecha</AttriName>
+<Description>Alquiler Fecha</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>T</DataType>
+<Presicion>8</Presicion>
+<Scale>5</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description>
+<TakesValueFrom></TakesValueFrom>
+<AttriType>
+<DataType>N</DataType>
+<Presicion>4</Presicion>
+<Scale>0</Scale>
+<Properties>
+<Property>
+<Name>Autonumber</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>Autogenerate</Name>
+<Value>No</Value></Property>
+<Property>
+<Name>AllowNulls</Name>
+<Value>No</Value></Property></Properties></AttriType></Attribute></AttrisInTable>
+<AttrisNoLongerInTable></AttrisNoLongerInTable>
+<AttrisInManyTables></AttrisInManyTables></TableAttributes>
+<TableIndices>
+<Indices>
+<Index>
+<IndexName>IALQUILER</IndexName>
+<IndexType>u</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>7</AttriId>
+<AttriName>AlquilerId</AttriName>
+<Description>Alquiler Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>Yes</Clustered></Index>
+<Index>
+<IndexName>IALQUILER1</IndexName>
+<IndexType>d</IndexType>
+<IndexAttris>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></IndexAttris>
+<IndexExistance>AlreadyExist</IndexExistance>
+<Clustered>No</Clustered></Index></Indices></TableIndices>
+<FKConstraints>
+<FKConstraint>
+<ChangeType>none</ChangeType>
+<Table>
+<TableId>2</TableId>
+<TableName>Propiedad</TableName>
+<Description>Propiedad</Description></Table>
+<Attributes>
+<Attribute>
+<AttriId>3</AttriId>
+<AttriName>PropiedadId</AttriName>
+<Description>Propiedad Id</Description></Attribute></Attributes></FKConstraint></FKConstraints>
+<Statements>
+<Statement>CREATE TABLE [Alquiler] ([AlquilerId]  smallint NOT NULL , [AlquilerFecha]  datetime NOT NULL , [PropiedadId]  smallint NOT NULL , PRIMARY KEY([AlquilerId])) </Statement>
+<Statement>CREATE NONCLUSTERED INDEX [IALQUILER1] ON [Alquiler] ([PropiedadId] )</Statement>
+<Statement>ALTER TABLE [Alquiler] ADD CONSTRAINT [IALQUILER1] FOREIGN KEY ([PropiedadId]) REFERENCES [Propiedad] ([PropiedadId])</Statement></Statements>
+<NeedReorganizationProgram>False</NeedReorganizationProgram>
+<Warnings></Warnings>
+<Errors></Errors></ReorgSpec>

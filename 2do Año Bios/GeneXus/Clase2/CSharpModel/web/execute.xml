@@ -1,0 +1,28 @@
+<?xml-stylesheet type='text/xsl' href='prgs.xsl'?><Objects>
+  <Charset>UTF-8</Charset>
+  <Path>file:///C:/Program Files (x86)/GeneXus/GeneXus15Trial/</Path>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>Barrio</ObjName>
+    <ObjDesc>Barrio</ObjDesc>
+    <ObjLink>barrio.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>Propiedad</ObjName>
+    <ObjDesc>Propiedad</ObjDesc>
+    <ObjLink>propiedad.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>Alquiler</ObjName>
+    <ObjDesc>Alquiler</ObjDesc>
+    <ObjLink>alquiler.aspx</ObjLink>
+  </Object>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>Visitas</ObjName>
+    <ObjDesc>Visitas</ObjDesc>
+    <ObjLink>visitas.aspx</ObjLink>
+  </Object>
+</Objects>
