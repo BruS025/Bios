@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MPListadosIE.master.cs" Inherits="MasterPages___Themes___Skins_MPListadosIE" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Página sin título</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            color: #00CC00;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="style1">
+    
+        PAGINA DE LISTADO ESTADISTICOS (Internet Explorer)</div>
+
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="756px">
+            <StaticMenuStyle Width="500px" />
+            <Items>
+                <asp:MenuItem Text="Produccion" Value="Produccion">
+                    <asp:MenuItem Text="Listado de Productos en Fase Inicial" 
+                        Value="Listado de Productos en Fase Inicial"></asp:MenuItem>
+                    <asp:MenuItem Text="Listado de Productos Finalizados" 
+                        Value="Listado de Productos Finalizados"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Distribucion" Value="Distribucion">
+                    <asp:MenuItem Text="Listado de Distribuidores Autorizados" 
+                        Value="Listado de Distribuidores Autorizados"></asp:MenuItem>
+                    <asp:MenuItem Text="Listado de Asignacion de Distribucion" 
+                        Value="Listado de Asignacion de Distribucion"></asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="Ventas" Value="Ventas">
+                    <asp:MenuItem Text="Listado de Ventas de Un Producto" 
+                        Value="Listado de Ventas de Un Producto"></asp:MenuItem>
+                </asp:MenuItem>
+            </Items>
+        </asp:Menu>
+
+        
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            <p>
+                &nbsp;</p>
+        
+        </asp:ContentPlaceHolder>
+   
+    </form>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Duenios>
+  <Duenio>
+    <Cedula>12345678</Cedula>
+    <Nombre>Rodri</Nombre>
+    <Direccion>2017</Direccion>
+  </Duenio>
+  <Duenio>
+    <Cedula>12345677</Cedula>
+    <Nombre>Negro</Nombre>
+    <Direccion>Lalallaa</Direccion>
+  </Duenio>
+  <Duenio>
+    <Cedula>55555</Cedula>
+    <Nombre>Mamadera</Nombre>
+    <Direccion>aspoasdpo</Direccion>
+  </Duenio>
+</Duenios>

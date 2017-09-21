@@ -1,0 +1,4 @@
+<asp:TextBox ruant = "server" BackColor="Blue"/>
+<asp:Button runat = "server" BorderStyle = "Dotted" Font-Underline = "true"/>
+<asp:DropDowList runat = "server" BackColor = "Green"/>
+

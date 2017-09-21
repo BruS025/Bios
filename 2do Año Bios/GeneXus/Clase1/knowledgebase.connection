@@ -1,0 +1,10 @@
+﻿<ConnectionInformation>
+	<DBName>GX_KB_Clase1</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>PC113S8</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>C:\Models\Clase1</Directory>
+	<DataFile>GX_KB_Clase1.mdf</DataFile>
+	<LogFile>GX_KB_Clase1_log.ldf</LogFile>
+	<HostName>PC113S8</HostName>
+</ConnectionInformation>

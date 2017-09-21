@@ -1,0 +1,110 @@
+Controles de navegacion estos son los que nos van a permitir navegar en el sitio(sin tener hipervinculos por todos lados)
+Son 3 controles y son los que estan la barra de herramientas
+
+2do conjunto de controles de acceso a datos son los dataSourse
+Estos son controles especiales porque no tienen interfaz usuario(el usuario no los ve)
+
+3ro Autenticacion y Autorizacion de usuarios
+
+1ero Controles de navegacion
+
+hay 2 formas para navegar dentro de un sitio web 
+1era es haciendo a mano algun tipo de menu que puede ser utilizacion algun controlador de asp que idiealmente deveria estar en la MasterPage si tengo
+y en los casos promedio estan en todas las paginas,Esto genera un pequeño problema de mantenimiento porque tenemos que buscar en todos lados donde estan las cosas
+para actualizar lo segundo es trabajar los menu de navegacion que tenemos pero basados en lo que se llama el mapa del sitio Web.SiteMap (esto esta en un solo lado)
+esto genera una ventaja porque solo modifico en un lado 
+Como funciona el Web.Config este archivo esta escrito en XML el cual no nevesariamente no tiene que ser unico en el sitio ya que puedo poner uno por cada directoio 
+que tenga mi sitio web no puedo tener mas de uno por directorio, el web.config funciona cuando el sitio arranca (empieza a funcionar) se lee el archivo del web.config
+y toda su info se levanta a memoria esto genera que sea mas rapido(yo puedo consultar pero no modificarla en esa consulta directamente)si a mi se me ocurre hacer una mod
+fisica en el archivo no necesito para la ejecucion del sitio web lo que hace el server es dejarlo marcado como archivo modificado y la proxima vez que alguien quiera
+acceder al web.config el servidor lee el archivo y levanta la nueva info 
+
+El Web.SiteMap tiene muchas conicidencias con el web.config, esta escrito en XML tambien se lee la info y se guarda en memoria y tambien se le puede pasar por arriba del archivo
+y queda como modificado al igual que el web.config
+la diferencia es que yo solamente puedo tener uno por sitio! y tiene que estar en la raiz del sito web la info que yo levanto en memoria la puedo modificar pero esto
+no se va a reflejar nunca en el archivo va a quedar en memoria( lo recomendable es no modificar en memoria)
+
+dentro del archivo vamos a tener 2 etiquetas(web.SiteMap) la etiqueta SiteMap que es el nodo raiz y me dice comienzo y fin del mapa
+Despues tenemos una sola etiqueta siteMapNode para definir las categorias y los vinculos navegados
+ lo que varia es como se escribe la etiqueta (categorias y vinculos navegados)
+la primer forma de escribir es la etiqueta de apertura y cierre <siteMapNode.....> </siteMapNode> esto se refiere a una categoria
+<siteMapNode...../> etiqueta de autoCierre esto se refiere a un vinculo navegable 
+Atributos Title reprecenta el texto que se va a ver en ese item del menu(si no le ponemos nada no se ve nada Obligatorio que tenga algo)
+Description Ese lo podemos dejar en blanco "" y es la ayuda que da el mouse cuando te paras arriba de algo en la pagina
+url es la direccion a donde va a navegar ese item (depende del control que estemos usando si es navegable o no )
+en el gridWieb no  el url tiene que ir si o si 
+en caso que sea sobre una url interna del sitio es aconsejable que empieze empieze desde la raiz 
+agregar mapa del sito agregar nuevo mapa del sitio 
+
+Controles dentro de la barra de navegacion
+El control menu es un conjunto de items navegables que pueden tener varios niveles y que pueden configurarse a mano en tiempo de diseño o se puede asociar a un mapa del 
+sitio o se puede cargar dinamicamente en tiempo de ejecucion este tiene varios niveles para abrir un sub nivel tengo que cliclear en una categoria y aca es donde hay
+problemas porque si la categoria es navegable porque me va a saltar a y no me muestra el submenu
+
+TreeWiew
+Este se comporta como el menu agregando iconos y simbolos de contraccion y expacion,se puede cargar en tiempo de diseño o mediante un mapa de sitio 
+
+SiteMapPath es un control que no es un control de menu que no te muestra todas las opciones que tenes pero si te dice por todos los lugares que pasaste y podes acceder nuevamente 
+incluyendo si pasaron por una categoria para llegar a donde estan (solo vas hacia atras nunca hacia adelante)en este caso el control solo trabaja con el mapa del sito
+y para funcionar lo que hace es buscar el nombre de la pagina actual dentro del mapa del sito el problema es que si no encuentra la pagina en tiempo de ejecucion la pagina actual
+en el mapa del sitio tira una exepcion y el problema es que no hay try para eso
+
+para manejarlo a mano en tiempo de diseño usamos el boton de play del control la opcion editar nodos
+Propiedades del nodo 
+La primera y mas importante es text este es id si lo que queremos hacer es algo navegable usamos navegateUrl(si va basio queda como una categoria)
+podemos usar el treewieb para obtener selecciones (Capturar la seleccion) esto implica que voy a capturar el evento selecctedNodeChange y aca adentro puedo preguntar por
+el valor del selectedValue (para que se carge en el nodo) tengo que setear la propiedad value 
+ExpandDepth es la profundidad de largo que se va a mostrar por defecto
+ImageSet son los iconos que puede mostrar 
+
+Controles DataSource Estos controles no tiene interfaz grafica pero vienen ya con todas las funcionalidades programadas para trabajar con una fuente de datos el nombre del control
+nos dice con fuente va a trabajar la gran mayoria permite consultas y actualizaciones ( la desventaja de estos controles son 2)
+1- podemos trabajar con ellos solo seteando propiedades en tiempo de diseño esto significa que no hay codigo trasero y se provoca un excepcion para capturarlo no tenemos try
+2- trabaja directo sobre la fuente de datos mapa de sitio base de datos 
+la ventaja es que podemos hacer un formulario de ABM sin formular nada
+
+EntityDataSource
+	trabaja con una fuente de datos de entityFrameWork(es un marco de trabajo que automatiza lo de la capa de persistencia y entidades compartida)data una extructura de la bd
+crea un datatable con lo de las tablas de la bd
+
+LinqDataSourse
+	Maneja informacion que se resultado de consultas linq de microsoft(esto es un lenguaje de consultas similar al SQL pero se puede usar dentro del codigo c#,etc)
+Este obtiene le resultado de la consulta y solo puedo consultar no podemos modificar
+
+ObjetDataSource 
+es el unico que me permite trabajra con capas ya que me permite trabajar con conjunto de datos definidos(entidades conpartidas)que puede manejar a travez de objetos
+intermedios esto quiere decir que puede hablar con las clases de logica
+
+SiteMapDataSource
+	este control de forma automatica va a buscar el archivo web.sitemap (sin ningun tipo de seto) no se puede modificar en tiempo de ejecucion
+
+SqlDataSource
+	me permite trabajar con cualquier tipo de funte de datos de lenguaje sql 
+
+XMLDataSource
+	trabaja directamente con un archivo de formato xml permite hacer consultas y actualizaciones y se le pasa por arriba todo (entidades compartidas etc etc)
+
+
+Como se conectan los controles DataSource que no tienen interfaz grafica propia con controles que puedan mostrar la informacion que estos estan manejando esto se puede hacer en tiempo
+de diseño (parte grafica) mediante la propiedades DataSourceID (esta es estatica en tiempo de diseño)
+
+Menu
+	Si queremos que nave a algun lado usamos navegateUrl y si queremos capturar el evento MenuItemclik y saber el valor el valor del elemento seleccionado cuando 
+seteamos el elemento tenemos que darle valor a la propiedad value
+
+Propiedades
+	la mas importante es Orientacion que lo podemos mostrar orizontal o vertical
+
+staticdisplaylevels 
+	me dice que es lo que parece por defecto en el menu desplegado acepta valores de 1 para arriba o mas segun los niveles que quiera mostrar
+
+SiteMapPath
+automaticamente me va a mirar el mapa del sitio y como sabe como se llama la pagina donde esta ubicado la busca dentro de dicho mapa
+Este control no es para usar dentro de una masterpage los otros 2 controles si
+
+Si quiero crear un menu en tiempo de ejecucion voy a crear controles y dinamicamente no puedo agregar controles a la pagina para lo cual puedo usar los controles contenedores
+(panel o placeholder) estos si se pueden re armar en tiempo de ejecucion
+
+
+para poder manejar el mapa del sitio tengo 2 clases la primera la clase siteMap la cual reprecenta el mapa del sito este es unico  y no hay objetos, siendo el primer
+nodo de ese mapa la propiedades rootNode que reprecenta el primer nodo que va a contener le resto del mapa esta estructura esta compuesta por objetos SiteMapNode

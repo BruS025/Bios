@@ -1,0 +1,15 @@
+Empresa (ruc,nombre,telefono)
+
+Producto (cod,nombre,fecha_vencimiento,precio)
+
+Congelado (cod,peso)
+
+Enlatado (cod,tipo)
+
+Similar (cod,cod_similar)
+
+Cliente (documento,nombre,apellido,calle,numero_puerta,telefono)
+
+Venta (id_venta,fecha,total_venta,cantidad)
+
+Relacion (id,id_venta,documento,cod)

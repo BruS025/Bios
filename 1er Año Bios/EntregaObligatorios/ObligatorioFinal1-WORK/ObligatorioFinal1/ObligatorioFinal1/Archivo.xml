@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <Hora>21:02</Hora>
+    <CasaComidas>1234123412341234</CasaComidas>
+    <IdPlato>1</IdPlato>
+    <Cantidad>4</Cantidad>
+    <DireccionEntrega>Calle 1234</DireccionEntrega>
+  </Table>
+  <Table>
+    <Hora>21:02</Hora>
+    <CasaComidas>1234123412341234</CasaComidas>
+    <IdPlato>1</IdPlato>
+    <Cantidad>1</Cantidad>
+    <DireccionEntrega>Calle 1234</DireccionEntrega>
+  </Table>
+</NewDataSet>

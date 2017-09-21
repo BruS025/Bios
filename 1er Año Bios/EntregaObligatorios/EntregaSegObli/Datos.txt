@@ -1,0 +1,7 @@
+Nombre:Rodrigo
+Apellido:Antognazza
+C.I:4.893.909-7 
+
+Nombre:Bruno
+Apellido:Suarez
+C.I:4.524.732-4

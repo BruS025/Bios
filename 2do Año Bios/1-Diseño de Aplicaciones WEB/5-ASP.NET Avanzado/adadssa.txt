@@ -1,0 +1,99 @@
+    protected void btnMail30_Click(object sender, EventArgs e)
+    {
+        List<EntidadesCompartidas.Mail> _listMail = Logica.LogicaMail.ListarMail();
+
+        var resultado = from Mail in _listMail
+                        where Mail.Asunto.Count() > 30
+                        select Mail;
+
+
+        List<EntidadesCompartidas.Mail> _resultado = new List<EntidadesCompartidas.Mail>();
+
+        foreach (var item in resultado)
+        {
+            _resultado.Add(item);
+
+            gvMostrar.DataSource = resultado;
+            gvMostrar.DataBind();
+
+        }
+    }
+
+    protected void btnUsuariosNombre_Click(object sender, EventArgs e)
+    {
+        List<EntidadesCompartidas.Usuarios> _listaResultado = (from unUse in (Logica.LogicaUsuario.ListarUsuarios())
+                                                               orderby unUse.NombreUsuario
+                                                               select unUse).ToList<EntidadesCompartidas.Usuarios>();
+
+        gvMostrar.DataSource = _listaResultado;
+        gvMostrar.DataBind();
+    }
+
+    protected void btnAndresito_Click(object sender, EventArgs e)
+    {
+        List<EntidadesCompartidas.Mail> _listaResultado = (from unUse in (Logica.LogicaMail.ListarMail())
+                                                           where unUse.UserEnvio.NombreUsuario.Contains("Andresito")
+                                                           select unUse).ToList<EntidadesCompartidas.Mail>();
+
+        gvMostrar.DataSource = _listaResultado;
+        gvMostrar.DataBind();
+    }
+
+    protected void Button4_Click(object sender, EventArgs e)
+    {
+        List<EntidadesCompartidas.Mail> _listaResultado = (from unUse in (Logica.LogicaMail.ListarMail())
+                                                           where unUse.Asunto.Count() > 10 || unUse.Texto == ""
+                                                           select unUse).ToList<EntidadesCompartidas.Mail>();
+
+        gvMostrar.DataSource = _listaResultado;
+        gvMostrar.DataBind();
+    }
+
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+                                    var _listaResultado = from unUse in (Logica.LogicaMail.ListarMail())
+                                                           select new
+                                                           {
+                                                               envia = unUse.UserEnvio.NombreCompleto,
+                                                               recive = unUse.UserRecibio.NombreCompleto
+                                                           };
+        gvMostrar.DataSource = _listaResultado;
+        gvMostrar.DataBind();
+    }
+
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        var _ListaResultado = from unUse in (Logica.LogicaMail.ListarMail())
+                              group unUse by unUse.UserEnvio.NombreCompleto
+                              into tabla
+                              select new
+                              {
+                                      tabla.Key,
+                                      canti = tabla.Count(),
+                              };
+
+
+
+
+        gvMostrar.DataSource = _ListaResultado;
+        gvMostrar.DataBind();
+    }
+
+    protected void Button7_Click(object sender, EventArgs e)
+    {
+        var _ListaResultado = from unUse in (Logica.LogicaMail.ListarMail())
+                              group unUse by unUse.UserEnvio.NombreCompleto
+                              into tabla
+                              where tabla.Count() > 3
+                              select new
+                              {
+                                  tabla.Key,
+                                  canti = tabla.Count(),
+                              };
+
+
+
+
+        gvMostrar.DataSource = _ListaResultado;
+        gvMostrar.DataBind();
+    }

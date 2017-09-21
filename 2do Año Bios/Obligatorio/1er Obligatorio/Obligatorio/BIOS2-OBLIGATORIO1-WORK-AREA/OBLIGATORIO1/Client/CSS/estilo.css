@@ -1,0 +1,147 @@
+﻿body , html{
+    height: 100%;
+    background-color:lightgreen;
+    color:white;
+}
+
+.titulo{
+    font-family:'Times New Roman', Times, serif;
+    font-size:x-large;
+    text-align:center;
+}
+
+.texto{
+    height:100%;
+    font-size:large;
+    margin-bottom:5px; 
+    vertical-align:central;
+}
+
+.campo{
+    color:black;
+    vertical-align:central;
+}
+
+.campo:focus{
+    background-color:azure;
+    color:black;
+}
+
+.boton{
+    height:100%;
+    background-color:aliceblue;
+    font-weight: 900;
+    font-size: 20px;
+    color:aqua;
+    cursor:pointer;
+    border:none;
+}
+
+.boton:hover{
+    color:white;
+    background-color:aqua;
+}
+
+.resultado{
+    color:red;
+    font-size:medium;
+}
+
+.resultado:hover{
+    font-weight:900;
+}
+
+.navbar-default {
+  background-color: red;
+}
+
+.sitemap{
+    background-color:blue;
+    margin-left: 0px;
+    width:200px;
+    vertical-align:central;
+}
+
+.masterNombre{
+    color:cornflowerblue;
+    background-color:aliceblue;
+    text-align:left;
+    height:30px;
+    font-weight:900;
+    font-size:large;
+    vertical-align:central;
+}
+
+.botonSalirContenedor{
+    text-align:right;
+    margin-top:-22px;
+    vertical-align:central;
+}
+
+.botonSalir{
+    color:red;
+    background-color:lightcoral;
+    height:32px;
+    width:80px;
+    text-align:center;
+    font-size:large;
+    border:none;
+    
+}
+
+.botonSalir:hover{
+    color:lightcoral;
+    background-color:red;
+}
+
+.buscar{
+    color:blue;
+    background-color:lightblue;
+    width:80px;
+    height:32px;
+    text-align:center;
+    vertical-align:central;
+    font-size:medium;
+    border:none;
+}
+
+.buscar:hover{
+    color:lightblue;
+    background-color:blue;
+}
+
+.botonCrear{
+    color:green;
+    background-color:lightgreen;
+    height:32px;
+    width:80px;
+    text-align:center;
+    font-size:large;
+    border:none;
+    vertical-align:central;
+    
+}
+
+.botonCrear:hover{
+    color:lightgreen;
+    background-color:green;
+}
+
+.botonModificar{
+    color:blue;
+    background-color:lightblue;
+    height:32px;
+    width:80px;
+    text-align:center;
+    font-size:large;
+    border:none;
+}
+
+.botonModificar:hover{
+    color:lightblue;
+    background-color:blue;
+}
+
+.dropDownList{
+    height:22px;
+}

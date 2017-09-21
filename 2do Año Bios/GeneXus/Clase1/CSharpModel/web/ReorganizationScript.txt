@@ -1,0 +1,3 @@
+ALTER TABLE [Cliente] ALTER COLUMN [ClienteDireccion] char(20) NOT NULL
+ALTER TABLE [Cliente] ALTER COLUMN [ClienteNombre] char(20) NOT NULL
+

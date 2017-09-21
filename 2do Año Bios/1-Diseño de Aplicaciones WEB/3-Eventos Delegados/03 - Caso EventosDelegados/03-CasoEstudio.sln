@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "03 - Caso EventosDelegados", ".", "{2F631C48-5004-46F6-8450-DE3DEDC55648}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/03A-EventosDelegados"
+		Debug.AspNetCompiler.PhysicalPath = "..\03A-EventosDelegados\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\03A-EventosDelegados\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/03A-EventosDelegados"
+		Release.AspNetCompiler.PhysicalPath = "..\03A-EventosDelegados\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\03A-EventosDelegados\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1285"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F631C48-5004-46F6-8450-DE3DEDC55648}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{2F631C48-5004-46F6-8450-DE3DEDC55648}.Debug|.NET.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "06 - CasoEstudioEsqueleto", ".", "{A7E24546-03EB-4C6A-8DD7-D395DB0ECBA3}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/06 - JscriptEstilos"
+		Debug.AspNetCompiler.PhysicalPath = "..\06 - JscriptEstilos\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\06 - JscriptEstilos\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/06 - JscriptEstilos"
+		Release.AspNetCompiler.PhysicalPath = "..\06 - JscriptEstilos\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\06 - JscriptEstilos\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1152"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A7E24546-03EB-4C6A-8DD7-D395DB0ECBA3}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{A7E24546-03EB-4C6A-8DD7-D395DB0ECBA3}.Debug|.NET.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

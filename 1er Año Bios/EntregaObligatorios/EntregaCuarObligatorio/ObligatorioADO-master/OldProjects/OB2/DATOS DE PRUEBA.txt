@@ -1,0 +1,6 @@
+1 - Ingresar a "Modificar" en la seccion "Empresa"
+2 - Ccompletar campos y presionar "Aceptar"
+3 - Ingresar a "Modificar" en la seccion "Empresa"
+4 - Presionar boton "Cancelar"
+
+Se generan datos de prueba

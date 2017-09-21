@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Autos>
+  <Auto>
+    <Matricula>ABB133</Matricula>
+    <Marca>Mercedes</Marca>
+    <Modelo>2017</Modelo>
+    <Duenio>12345678</Duenio>
+    <Precio>999990</Precio>
+  </Auto>
+  <Auto>
+    <Matricula>AAT100</Matricula>
+    <Marca>Audi</Marca>
+    <Modelo>TT</Modelo>
+    <Duenio>12345677</Duenio>
+    <Precio>100000</Precio>
+  </Auto>
+  <Auto>
+    <Matricula>TTE699</Matricula>
+    <Marca>Fiat</Marca>
+    <Modelo>Premio</Modelo>
+    <Duenio>55555</Duenio>
+    <Precio>15000</Precio>
+  </Auto>
+  <Auto>
+    <Matricula>PAP10</Matricula>
+    <Marca>Fiat</Marca>
+    <Modelo>www</Modelo>
+    <Duenio>12345678</Duenio>
+    <Precio>1000</Precio>
+  </Auto>
+</Autos>

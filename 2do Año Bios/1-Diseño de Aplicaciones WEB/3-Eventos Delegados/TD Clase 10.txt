@@ -1,0 +1,16 @@
+TD:
+Hacer el diagrama de arquitectura y de componentes de la siguiente realidad:
+
+	- Sistema para los hoteles Meria, hay unos 350 en el mundo, por un lado los clientes buscan hoteles en internet
+	 la idea es que muestre los datos el hotel y que si quiero puedo reservar
+	
+	 tmb estan los empleados "recepcion", ellos pueden hacer reservas y se encargan del consumo que haga el cliente en la habitación
+	 
+	 para esto vamos a tomar en cuenta que un hotel tiene 75 habitaciones aprox.
+	 
+	 el personal de mantenimiento manejan stock de articulos de la habitacion
+	 
+	 -arq global, local o convinada
+	 
+	 
+	 en el diagrama de componente vamos a usar fabrica y singleton

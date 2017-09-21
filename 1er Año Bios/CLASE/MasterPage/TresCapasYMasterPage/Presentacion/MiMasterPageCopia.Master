@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MiMasterPageCopia.master.cs" Inherits="Presentacion.MiMasterPageCopia" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2 {
+            width: 252px;
+        }
+        .auto-style3 {
+            width: 337px;
+        }
+        .auto-style4 {
+            width: 79%;
+        }
+        .auto-style5 {
+            width: 225px;
+        }
+    </style>
+</head>
+<body style="height: 606px">
+    <form id="form1" runat="server">
+    <div style="height: 371px">
+        Menu<br />
+        <table class="auto-style4">
+            <tr>
+                <td class="auto-style5">
+                    <asp:LinkButton ID="lnkbDefault" runat="server" PostBackUrl="~/Default.aspx">Default</asp:LinkButton>
+                </td>
+                <td class="auto-style2">
+                    <asp:LinkButton ID="lnkbArticulos" runat="server" PostBackUrl="~/Articulo.aspx">Articulos</asp:LinkButton>
+                </td>
+                <td class="auto-style3">
+                    <asp:LinkButton ID="LinkButton3" runat="server" PostBackUrl="~/ListaArticulos.aspx">Lista Articulos</asp:LinkButton>
+                </td>
+                <td>
+                    <asp:LinkButton ID="LinkButton4" runat="server" PostBackUrl="~/Pedidos.aspx">Pedido</asp:LinkButton>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

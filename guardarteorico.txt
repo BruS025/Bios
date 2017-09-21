@@ -1,0 +1,15 @@
+que es una dependencia funcional
+como se clasifican las dependencias funcionales
+que utilidades tienen las formas normales
+que es la primera forma normal
+2da forma normal
+que es la 3era forma normal
+que es una clave primaria 
+que es una clave foranea
+que clausula de la sentencia select se utiliza para filtrar grupos
+cual se usa para filtrar registros
+que comando transac se usa para eliminar una base de datos
+indique las formas en las que un proc almacenado puede devolver valores
+cual es cometido de la restriccion unike
+defina que es una transaccion
+defina la forma normal bcnf
