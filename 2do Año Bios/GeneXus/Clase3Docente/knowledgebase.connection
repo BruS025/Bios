@@ -1,0 +1,10 @@
+﻿<ConnectionInformation>
+	<DBName>GX_KB_Clase3Docente</DBName>
+	<IntegratedSecurity>True</IntegratedSecurity>
+	<ServerInstance>SPRITEBOY</ServerInstance>
+	<CreateDbInKbFolder>True</CreateDbInKbFolder>
+	<Directory>C:\Models\Clase3Docente</Directory>
+	<DataFile>GX_KB_Clase3Docente.mdf</DataFile>
+	<LogFile>GX_KB_Clase3Docente_log.ldf</LogFile>
+	<HostName>SPRITEBOY</HostName>
+</ConnectionInformation>

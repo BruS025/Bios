@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prgs.xsl"?>
+<Objects>
+   <Charset>UTF-8</Charset>
+   <Path>file:///C:/Program Files (x86)/GeneXus/GeneXus15Trial/</Path>
+   <Object>
+      <ObjCls>0</ObjCls>
+      <ObjName>Producto</ObjName>
+      <ObjDesc>Producto</ObjDesc>
+      <ObjLink>producto.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>0</ObjCls>
+      <ObjName>Factura</ObjName>
+      <ObjDesc>Factura</ObjDesc>
+      <ObjLink>factura.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>0</ObjCls>
+      <ObjName>Cliente</ObjName>
+      <ObjDesc>Cliente</ObjDesc>
+      <ObjLink>cliente.aspx</ObjLink>
+   </Object>
+</Objects>

@@ -1,0 +1,10 @@
+CREATE TABLE [GXA0004] ([ClienteId]  smallint NOT NULL  IDENTITY(1,1), [ClienteNombre]  char(20) NOT NULL )
+SET IDENTITY_INSERT [GXA0004] ON
+INSERT INTO [GXA0004] ([ClienteId], [ClienteNombre]) SELECT [ClienteId], [ClienteNombre] FROM [Cliente] T1
+SET IDENTITY_INSERT [GXA0004] OFF
+DROP TABLE [Cliente]
+sp_rename '[GXA0004]', 'Cliente'
+ALTER TABLE [Cliente] ADD PRIMARY KEY([ClienteId])
+
+ALTER TABLE [Factura] ADD CONSTRAINT [IFACTURA1] FOREIGN KEY ([ClienteId]) REFERENCES [Cliente] ([ClienteId])
+
