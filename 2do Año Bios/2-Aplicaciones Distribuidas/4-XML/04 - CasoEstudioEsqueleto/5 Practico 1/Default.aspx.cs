@@ -268,35 +268,65 @@ public partial class _Default : System.Web.UI.Page
         txtPrecio.Text = "";
     }
 
-
     protected void btBuscar_Click(object sender, EventArgs e)
     {
         // Limpio el resultado anterior
         GVAutos.DataSource = null;
         GVAutos.DataBind();
         LblError.Text = "";
-        string buscar = txtBuscar.Text;
 
         XElement _doc = XElement.Load(Server.MapPath("~/XML/Autos.xml"));
 
         var _resultado = (from unNodo in _doc.Elements("Auto")
-                          where (string)unNodo.Element("Matricula") == buscar ||
-                          (string)unNodo.Element("Marca") == buscar ||
-                          (string)unNodo.Element("Modelo") == buscar ||
-                          (string)unNodo.Element("Duenio") == buscar ||
-                          (string)unNodo.Element("Precio") == buscar
-                          orderby (string)unNodo.Element("Matricula") // REVISAR
-                          select
-                          new
-                          {
-                              Matricula = unNodo.Element("Matricula").Value, // SI usamos elements cre conunto de conjuntos
-                              Marca = unNodo.Element("Marca").Value,
-                              Modelo = unNodo.Element("Modelo").Value,
-                              Duenio = unNodo.Element("Duenio").Value,
-                              Precio = unNodo.Element("Precio").Value
-                          }).ToList();
+                         select unNodo).ToList();
 
-        GVAutos.DataSource = _resultado;
+        if (TxtMatricula.Text != "")
+        {
+            _resultado = (from unNodo in _resultado
+                          where (string)unNodo.Element("Matricula") == TxtMatricula.Text
+                          select unNodo).ToList();
+        }
+
+        if (TxtMarca.Text != "")
+        {
+            _resultado = (from unNodo in _resultado
+                          where (string)unNodo.Element("Marca") == TxtMarca.Text
+                          select unNodo).ToList();
+        }
+
+        if (txtModelo.Text != "")
+        {
+            _resultado = (from unNodo in _resultado
+                          where (string)unNodo.Element("Modelo") == txtModelo.Text
+                          select unNodo).ToList();
+        }
+
+        if (ddlDuenio.SelectedValue != "")
+        {
+            _resultado = (from unNodo in _resultado
+                          where (string)unNodo.Element("Dueño") == ddlDuenio.SelectedValue
+                          select unNodo).ToList();
+        }
+
+        if (txtPrecio.Text != "")
+        {
+            _resultado = (from unNodo in _resultado
+                          where (string)unNodo.Element("Precio") == txtPrecio.Text
+                          select unNodo).ToList();
+        }
+
+        var final = (from unNodo in _resultado
+                     select
+                     new
+                     {
+                         Matricula = unNodo.Element("Matricula").Value,
+                         Marca = unNodo.Element("Marca").Value,
+                         Modelo = unNodo.Element("Modelo").Value,
+                         Duenio = unNodo.Element("Duenio").Value,
+                         Precio = unNodo.Element("Precio").Value
+                     }).ToList();
+
+        GVAutos.DataSource = final;
         GVAutos.DataBind();
     }
 }

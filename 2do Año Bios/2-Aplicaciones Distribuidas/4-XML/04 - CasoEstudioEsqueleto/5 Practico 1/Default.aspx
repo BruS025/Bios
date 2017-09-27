@@ -55,11 +55,37 @@
                         <asp:Button ID="BtnModificar" runat="server" Text="Modificar" OnClick="BtnModificar_Click" />
                     </td>
                 </tr>
-                <tr>
+                 <tr>
                     <td>Buscar: <asp:TextBox ID="txtBuscar" runat="server"></asp:TextBox> </td>             
                     <td> <asp:Button ID="btBuscar" runat="server" Text="Buscar" OnClick="btBuscar_Click" /> </td>
                 </tr>
-                    <tr>
+
+                <td>Matricula</td>
+                    <td>
+                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    </td>
+                    
+                <tr>
+                    <td>Marca</td>
+                    <td>
+                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Modelo</td>
+                    <td>
+                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td>Duenio</td>
+                    <td>
+                        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></td>
+                </tr>
+                <tr>
+                    <td>Precio</td>
+                    <td>
+                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
                         <td colspan="3">
                         <asp:Label ID="LblError" runat="server"></asp:Label>
                     </td>
