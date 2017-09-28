@@ -2,17 +2,22 @@
 <Duenios>
   <Duenio>
     <Cedula>12345678</Cedula>
-    <Nombre>Rodri</Nombre>
-    <Direccion>2017</Direccion>
+    <Nombre>Duenio1</Nombre>
+    <Direccion>Direccion1</Direccion>
   </Duenio>
   <Duenio>
-    <Cedula>12345677</Cedula>
-    <Nombre>Negro</Nombre>
-    <Direccion>Lalallaa</Direccion>
+    <Cedula>23456789</Cedula>
+    <Nombre>Duenio2</Nombre>
+    <Direccion>Direccion2</Direccion>
   </Duenio>
   <Duenio>
-    <Cedula>55555</Cedula>
-    <Nombre>Mamadera</Nombre>
-    <Direccion>aspoasdpo</Direccion>
+    <Cedula>34567890</Cedula>
+    <Nombre>duenio3</Nombre>
+    <Direccion>Direccion3</Direccion>
+  </Duenio>
+  <Duenio>
+    <Cedula>45678901</Cedula>
+    <Nombre>duenio4</Nombre>
+    <Direccion>Direccion4</Direccion>
   </Duenio>
 </Duenios>

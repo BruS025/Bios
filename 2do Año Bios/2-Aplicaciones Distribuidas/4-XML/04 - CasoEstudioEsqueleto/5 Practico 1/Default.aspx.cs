@@ -226,15 +226,20 @@ public partial class _Default : System.Web.UI.Page
             // Leo info del archivo..........
             DataSet _Ds = new DataSet();
             _Ds.ReadXml(_camino);
-            // Cargo la informacion de los libros en la grilla
+            // Cargo la informacion de los autos
             GVAutos.DataSource = _Ds;
             GVAutos.DataBind();
-            // Cargo datos Autores
+            // Cargo datos duenio
             _Ds.ReadXml(Server.MapPath("~/XML/Duenios.xml"), XmlReadMode.InferSchema);
             ddlDuenio.DataSource = _Ds.Tables["Duenio"];
             ddlDuenio.DataTextField = "Nombre";
             ddlDuenio.DataValueField = "Cedula";
             ddlDuenio.DataBind();
+            ddlDuenio2.DataSource = _Ds.Tables["Duenio"];
+            ddlDuenio2.DataTextField = "Nombre";
+            ddlDuenio2.DataValueField = "Cedula";
+            ddlDuenio2.DataBind();
+            
 
         }
         catch (Exception ex)
@@ -276,42 +281,44 @@ public partial class _Default : System.Web.UI.Page
         LblError.Text = "";
 
         XElement _doc = XElement.Load(Server.MapPath("~/XML/Autos.xml"));
+        XElement _doc2 = XElement.Load(Server.MapPath("~/XML/Duenios.xml"));
 
         var _resultado = (from unNodo in _doc.Elements("Auto")
                          select unNodo).ToList();
 
-        if (TxtMatricula.Text != "")
+        if (txtMatricula2.Text != "")
         {
             _resultado = (from unNodo in _resultado
-                          where (string)unNodo.Element("Matricula") == TxtMatricula.Text
+                          where (string)unNodo.Element("Matricula") == txtMatricula2.Text
                           select unNodo).ToList();
         }
 
-        if (TxtMarca.Text != "")
+        if (txtMarca2.Text != "")
         {
             _resultado = (from unNodo in _resultado
-                          where (string)unNodo.Element("Marca") == TxtMarca.Text
+                          where (string)unNodo.Element("Marca") == txtMarca2.Text
                           select unNodo).ToList();
         }
 
-        if (txtModelo.Text != "")
+        if (txtModelo2.Text != "")
         {
             _resultado = (from unNodo in _resultado
-                          where (string)unNodo.Element("Modelo") == txtModelo.Text
+                          where (string)unNodo.Element("Modelo") == txtModelo2.Text
                           select unNodo).ToList();
         }
 
-        if (ddlDuenio.SelectedValue != "")
+        if (ddlDuenio2.SelectedValue != "")
         {
-            _resultado = (from unNodo in _resultado
-                          where (string)unNodo.Element("Dueño") == ddlDuenio.SelectedValue
+           _resultado = (from unNodo in _resultado
+                         join otroNodo in _doc2.Elements("Duenio") on (string)unNodo.Element("Duenio") equals (string)otroNodo.Element("Cedula")
+                          where (string)otroNodo.Element("Nombre") == ddlDuenio2.SelectedValue
                           select unNodo).ToList();
         }
 
-        if (txtPrecio.Text != "")
+        if (txtPrecio2.Text != "")
         {
             _resultado = (from unNodo in _resultado
-                          where (string)unNodo.Element("Precio") == txtPrecio.Text
+                          where (string)unNodo.Element("Precio") == txtPrecio2.Text
                           select unNodo).ToList();
         }
 
@@ -325,7 +332,7 @@ public partial class _Default : System.Web.UI.Page
                          Duenio = unNodo.Element("Duenio").Value,
                          Precio = unNodo.Element("Precio").Value
                      }).ToList();
-
+        
         GVAutos.DataSource = final;
         GVAutos.DataBind();
     }

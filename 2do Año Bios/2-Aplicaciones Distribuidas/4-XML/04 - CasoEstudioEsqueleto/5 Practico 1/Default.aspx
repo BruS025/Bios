@@ -62,28 +62,28 @@
 
                 <td>Matricula</td>
                     <td>
-                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="txtMatricula2" runat="server"></asp:TextBox>
                     </td>
                     
                 <tr>
                     <td>Marca</td>
                     <td>
-                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="txtMarca2" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Modelo</td>
                     <td>
-                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="txtModelo2" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                     <td>Duenio</td>
                     <td>
-                        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList></td>
+                        <asp:DropDownList ID="ddlDuenio2" runat="server"></asp:DropDownList></td>
                 </tr>
                 <tr>
                     <td>Precio</td>
                     <td>
-                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="txtPrecio2" runat="server"></asp:TextBox></td>
                 </tr>
                 <tr>
                         <td colspan="3">
