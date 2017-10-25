@@ -39,8 +39,10 @@
         <tr>
             <td><asp:Button ID="BtnAlta" runat="server" Text="Alta" Enabled="False" 
                     onclick="BtnAlta_Click" /></td>
-            <td><asp:Button ID="BtnBaja" runat="server" Text="Baja" Enabled="False" /></td>
-            <td><asp:Button ID="BtnModificar" runat="server" Text="Modificar" Enabled="False" /></td>
+            <td><asp:Button ID="BtnBaja" runat="server" Text="Baja" Enabled="False" 
+                    onclick="BtnBaja_Click" /></td>
+            <td><asp:Button ID="BtnModificar" runat="server" Text="Modificar" Enabled="False" 
+                    onclick="BtnModificar_Click" /></td>
         </tr>
         <tr>
             <td colspan="3">  &nbsp; </asp:Label> </td>

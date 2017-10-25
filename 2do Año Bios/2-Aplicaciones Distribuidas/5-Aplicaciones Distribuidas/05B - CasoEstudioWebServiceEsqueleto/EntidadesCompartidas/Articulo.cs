@@ -35,9 +35,9 @@ namespace EntidadesCompartidas
         //Contructor completo (no se puede usar a traves del WS)
         public Articulo(int pCodigo, string pNombre, decimal pPrecio)
         {
-            _codigo = pCodigo;
-            _nombre = pNombre;
-            _precio = pPrecio;
+            Codigo = pCodigo;
+            Nombre = pNombre;
+            Precio = pPrecio;
         }
 
 

@@ -18,7 +18,11 @@ namespace PresentacionWin
 
         private void ListarArticulos_Load(object sender, EventArgs e)
         {
-            
+            WSArticulos.ServicioArticulos service = new WSArticulos.ServicioArticulos();
+
+            WSArticulos.Articulo[] lista =  service.ListarArticulo();
+
+            DGVListado.DataSource = lista;
         }
     }
 }

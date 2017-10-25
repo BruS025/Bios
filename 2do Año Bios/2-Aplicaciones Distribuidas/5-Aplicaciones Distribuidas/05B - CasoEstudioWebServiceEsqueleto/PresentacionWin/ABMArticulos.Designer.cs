@@ -41,6 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.BarraEstado = new System.Windows.Forms.StatusStrip();
             this.LblError = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.Cronometro = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -94,6 +95,7 @@
             this.BtnBaja.Name = "BtnBaja";
             this.BtnBaja.Size = new System.Drawing.Size(23, 22);
             this.BtnBaja.Text = "Eliminar ";
+            this.BtnBaja.Click += new System.EventHandler(this.BtnBaja_Click);
             // 
             // BtnModificar
             // 
@@ -104,6 +106,7 @@
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Size = new System.Drawing.Size(23, 22);
             this.BtnModificar.Text = "Modificar";
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnDeshacer
             // 
@@ -142,7 +145,8 @@
             // BarraEstado
             // 
             this.BarraEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LblError});
+            this.LblError,
+            this.toolStripStatusLabel1});
             this.BarraEstado.Location = new System.Drawing.Point(0, 144);
             this.BarraEstado.Name = "BarraEstado";
             this.BarraEstado.Size = new System.Drawing.Size(286, 22);
@@ -154,10 +158,17 @@
             this.LblError.Name = "LblError";
             this.LblError.Size = new System.Drawing.Size(0, 17);
             // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(118, 17);
+            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
+            // 
             // Cronometro
             // 
             this.Cronometro.Enabled = true;
             this.Cronometro.Interval = 15000;
+            this.Cronometro.Tick += new System.EventHandler(this.Cronometro_Tick);
             // 
             // label1
             // 
@@ -235,5 +246,6 @@
         private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton BtnListar;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

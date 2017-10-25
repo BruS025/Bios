@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2014
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesCompartidas", "EntidadesCompartidas\EntidadesCompartidas.csproj", "{0AA33114-26A1-4164-946B-100B536CB099}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistencia", "Persistencia\Persistencia.csproj", "{A6AF4522-D759-4641-852D-57FBEA16CCE4}"
@@ -11,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csp
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PresentacionWeb", "PresentacionWeb\", "{E9C0CD81-E0A1-4E99-8B04-0C139C769C94}"
 	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		Debug.AspNetCompiler.VirtualPath = "/PresentacionWeb"
 		Debug.AspNetCompiler.PhysicalPath = "PresentacionWeb\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PresentacionWeb\"
@@ -30,28 +28,11 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PresentacionWeb", "Presenta
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentacionWin", "PresentacionWin\PresentacionWin.csproj", "{2E300EDB-1026-485D-AED4-923B0883AB82}"
-EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ServicioWeb", "..\ServicioWeb\", "{92801E20-5D19-422B-9A83-3640FB7E55CA}"
-	ProjectSection(WebsiteProperties) = preProject
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
-		ProjectReferences = "{0aa33114-26a1-4164-946b-100b536cb099}|EntidadesCompartidas.dll;{a6754e84-dc65-4548-8c8b-a819c7011450}|Logica.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_51151"
-		Debug.AspNetCompiler.PhysicalPath = "..\ServicioWeb\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51151\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_51151"
-		Release.AspNetCompiler.PhysicalPath = "..\ServicioWeb\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51151\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "51151"
-		DefaultWebSiteLanguage = "Visual C#"
+	ProjectSection(ProjectDependencies) = postProject
+		{440B81E8-582E-4261-9859-148E184A73A1} = {440B81E8-582E-4261-9859-148E184A73A1}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{440B81E8-582E-4261-9859-148E184A73A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -125,22 +106,18 @@ Global
 		{2E300EDB-1026-485D-AED4-923B0883AB82}.Release|Mixed Platforms.Build.0 = Release|x86
 		{2E300EDB-1026-485D-AED4-923B0883AB82}.Release|x86.ActiveCfg = Release|x86
 		{2E300EDB-1026-485D-AED4-923B0883AB82}.Release|x86.Build.0 = Release|x86
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|.NET.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|.NET.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Debug|x86.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|.NET.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|.NET.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|x86.ActiveCfg = Debug|Any CPU
-		{92801E20-5D19-422B-9A83-3640FB7E55CA}.Release|x86.Build.0 = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Release|.NET.ActiveCfg = Release|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{440B81E8-582E-4261-9859-148E184A73A1}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
