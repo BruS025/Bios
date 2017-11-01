@@ -31,26 +31,33 @@ namespace PresentacionWin
 
         private void TxtCodigo_Validating(object sender, CancelEventArgs e)
         {
-            TxtNombre.Text = "";
-            TxtPrecio.Text = "";
-
-            WSArticulos.ServicioArticulos sArts = new WSArticulos.ServicioArticulos();
-            WSArticulos.Articulo art = sArts.BuscarArticulo(Convert.ToInt32(TxtCodigo.Text));
-
-            if (art != null)
+            try
             {
-                TxtNombre.Text = art.Nombre;
-                TxtPrecio.Text = art.Precio.ToString();
-                BtnBaja.Enabled = true;
-                BtnModificar.Enabled = true;
-                BtnAlta.Enabled = false;
+                TxtNombre.Text = "";
+                TxtPrecio.Text = "";
+
+                WSArticulos.ServicioArticulos sArts = new WSArticulos.ServicioArticulos();
+                WSArticulos.Articulo art = sArts.BuscarArticulo(Convert.ToInt32(TxtCodigo.Text));
+
+                if (art != null)
+                {
+                    TxtNombre.Text = art.Nombre;
+                    TxtPrecio.Text = art.Precio.ToString();
+                    BtnBaja.Enabled = true;
+                    BtnModificar.Enabled = true;
+                    BtnAlta.Enabled = false;
+                }
+                else
+                {
+                    BtnBaja.Enabled = false;
+                    BtnModificar.Enabled = false;
+                    BtnAlta.Enabled = true;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                BtnBaja.Enabled = false;
-                BtnModificar.Enabled = false;
-                BtnAlta.Enabled = true;
-            }
+                LblError.Text= ex.Message;
+            }  
         }
 
         private void TxtCodigo_KeyPress(object sender, KeyPressEventArgs e)
