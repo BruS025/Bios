@@ -11,10 +11,6 @@ go
 
 --creo la base de datos---------------------------------------------------------------------
 CREATE DATABASE Banco
-ON(
-	NAME=Banco,
-	FILENAME='C:\Banco.mdf'
-)
 go
 
 

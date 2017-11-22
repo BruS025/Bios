@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
 namespace EntidadesCompartidas
 {
-   [Serializable]
-   public class Prestamo
+    [DataContract]
+    public class Prestamo
     {
        //atributos
        private int _IdPres;
@@ -16,26 +19,30 @@ namespace EntidadesCompartidas
        private Boolean _AprobadoPres;
 
 
-       //propiedades
-       public int Id
+        //propiedades
+        [DataMember]
+        public int Id
        {
            get { return _IdPres; }
            set { _IdPres = value; }
        }
 
-       public Cliente UnCliente
+        [DataMember]
+        public Cliente UnCliente
        {
            get { return _unCliente; }
            set { _unCliente = value; }
        }
 
-       public DateTime Fecha
+        [DataMember]
+        public DateTime Fecha
        {
            get { return _FechaPres; }
            set { _FechaPres = value; }
        }
 
-       public double Monto
+        [DataMember]
+        public double Monto
        {
            get { return _MontoPres; }
            set
@@ -47,7 +54,8 @@ namespace EntidadesCompartidas
            }
        }
 
-       public Boolean Aprobado
+        [DataMember]
+        public Boolean Aprobado
        {
            get { return _AprobadoPres; }
            set { _AprobadoPres = value; }

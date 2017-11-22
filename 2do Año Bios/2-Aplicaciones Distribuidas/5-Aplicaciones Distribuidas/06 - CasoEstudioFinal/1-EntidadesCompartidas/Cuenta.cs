@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
 namespace EntidadesCompartidas
 {
+    [KnownType(typeof(CuentaCAhorro))]
+    [KnownType(typeof(CuentaCorriente))]
 
-   [Serializable]
-   public class Cuenta
+    [DataContract]
+    public class Cuenta
     {
 
        // atributos
@@ -16,32 +21,37 @@ namespace EntidadesCompartidas
        private double _SaldoCta;
 
 
-       //propiedades
-       public int NumCta
+        //propiedades
+        [DataMember]
+        public int NumCta
        {
            get { return _NumCta; }
            set { _NumCta = value; }
        }
 
-       public Cliente UnCliente
+        [DataMember]
+        public Cliente UnCliente
        {
            get { return _unCliente; }
            set { _unCliente = value; }
        }
 
-       public double SaldoCuenta
+        [DataMember]
+        public double SaldoCuenta
        {
            get { return _SaldoCta; }
            set { _SaldoCta = value; }
        }
 
-       public string MiCliente
+        [DataMember]
+        public string MiCliente
        {
            get { return _unCliente.NomCli; }
            set { }
        }
 
-       public virtual string TipoCuenta
+        [DataMember]
+        public virtual string TipoCuenta
        {
            get { return "No hay Tipo"; }
            set { }

@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
 
 namespace EntidadesCompartidas
 {
-    [Serializable]
+    [DataContract]
     public class Cliente
     {
 
@@ -21,12 +21,14 @@ namespace EntidadesCompartidas
 
 
         //Propiedades
+        [DataMember]
         public int NumCli
         {
             get { return _NumCli; }
             set { _NumCli = value; }
         }
 
+        [DataMember]
         public string NomCli
         {
             get { return _NomCli; }
@@ -39,6 +41,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public string DirCli
         {
             get { return _DirCli; }
@@ -51,6 +54,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public string PassCli
         {
             get { return _PassCli; }
@@ -63,6 +67,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public string UsuCli
         {
             get { return _UsuCli; }
@@ -75,6 +80,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public List<string> ListaTelefonos
         {
             get { return _ListaTel; }

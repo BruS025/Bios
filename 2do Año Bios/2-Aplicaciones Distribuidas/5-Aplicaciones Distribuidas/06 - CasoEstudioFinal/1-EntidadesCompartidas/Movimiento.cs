@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
 namespace EntidadesCompartidas
 {
-    [Serializable]
+    [DataContract]
     public class Movimiento
     {
         //atributos
@@ -17,18 +20,21 @@ namespace EntidadesCompartidas
 
 
         //propiedades
+        [DataMember]
         public int IdMov
         {
             get { return _idMov; }
             set { _idMov = value; }
         }
 
+        [DataMember]
         public DateTime FechaMov
         {
             get { return _fechaMov; }
             set { _fechaMov = value; }
         }
 
+        [DataMember]
         public double MontoMov
         {
             get { return _MontoMov; }
@@ -41,6 +47,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public string TipoMov
         {
             get { return _tipoMov; }
@@ -53,6 +60,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public Cuenta UnaCuenta
         {
             get { return _unaCuenta; }

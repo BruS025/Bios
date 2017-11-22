@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
 namespace EntidadesCompartidas
 {
-    [Serializable]
+    [DataContract]
     public class CuentaCorriente : Cuenta
     {
         //atributos
@@ -13,6 +16,7 @@ namespace EntidadesCompartidas
 
 
         //propiedades
+        [DataMember]
         public double MinimoCta
         {
             get { return _minimoCta; }

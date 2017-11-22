@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
 namespace EntidadesCompartidas
 {
-    [Serializable]
+    [DataContract]
     public class Empleado
     {
         //atributos
@@ -15,12 +18,14 @@ namespace EntidadesCompartidas
 
 
         //Propiedades
+        [DataMember]
         public int CiEmp
         {
             get { return _CiEmp; }
             set { _CiEmp = value; }
         }
 
+        [DataMember]
         public string NomEmp
         {
             get { return _NomEmp; }
@@ -33,6 +38,7 @@ namespace EntidadesCompartidas
             }
         }
 
+        [DataMember]
         public string PassEmp
         {
             get { return _PassEmp; }

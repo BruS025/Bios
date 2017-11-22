@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using System.Runtime.Serialization;
+using System.ServiceModel;
+
 namespace EntidadesCompartidas
 {
-    [Serializable]
+    [DataContract]
     public class CuentaCAhorro: Cuenta
     {
 
@@ -14,19 +17,22 @@ namespace EntidadesCompartidas
         private double _CostoMovsCta;
 
         //propiedades
+        [DataMember]
         public int MovsCta
         {
             get { return _movsCta; }
             set { _movsCta = value; }
         }
 
+        [DataMember]
         public double CostoMovsCta
         {
             get { return _CostoMovsCta;}
             set { _CostoMovsCta = value; }
         }
 
-       public override string TipoCuenta
+        [DataMember]
+        public override string TipoCuenta
        {
            get { return "Caja de Ahorro"; }
            set { }
