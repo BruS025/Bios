@@ -8,7 +8,7 @@ using System.ServiceModel;
 
 namespace EntidadesCompartidas
 {
-    [KnownType(typeof(CuentaCAhorro))]
+    [KnownType(typeof(CuentaCAhorro))]//Me da la herencia para la cuenta caja ahorro
     [KnownType(typeof(CuentaCorriente))]
 
     [DataContract]

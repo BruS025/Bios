@@ -87,7 +87,6 @@ namespace EntidadesCompartidas
             set { _ListaTel = value; }
         }
 
-
         //Constructor completo
         public Cliente(int pNumCli, string pNomCli, string pDirCli, string pUsuCli, string pPassCli, List<string> pLista)
         {

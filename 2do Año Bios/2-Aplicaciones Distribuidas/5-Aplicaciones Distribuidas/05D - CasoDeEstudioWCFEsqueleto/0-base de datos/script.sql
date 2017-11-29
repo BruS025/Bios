@@ -9,10 +9,6 @@ END
 go
 
 CREATE DATABASE Ventas
-ON(
-	NAME=Venta,
-	FILENAME='C:\Ventas.mdf'
-)
 go
 
 -- Creo la estructura de la bd ----------------------------------------------------------------------

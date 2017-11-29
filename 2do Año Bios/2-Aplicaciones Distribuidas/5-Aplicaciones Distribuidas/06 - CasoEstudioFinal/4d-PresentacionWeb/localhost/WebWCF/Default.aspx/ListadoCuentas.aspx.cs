@@ -5,8 +5,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-using ServicioWCF;
-
 public partial class ListadoCuentas : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -15,7 +13,7 @@ public partial class ListadoCuentas : System.Web.UI.Page
         {
             try
             {
-                RpCuentas.DataSource = new ServicioWCFClient().ListaMovsDeCliente((Cliente)Session["Usuario"]);
+                RpCuentas.DataSource = new ServicioWeb.MiServicio().ListaCuentasDeCliente((ServicioWeb.Cliente)Session["Usuario"]);
                 RpCuentas.DataBind();
             }
             catch (Exception ex)

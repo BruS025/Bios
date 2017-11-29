@@ -23,7 +23,7 @@ namespace EntidadesCompartidas
             set { _minimoCta = value; }
         }
 
-       public override string TipoCuenta
+        public override string TipoCuenta
        {
            get { return "Cuenta Corriente";  }
            set { }
