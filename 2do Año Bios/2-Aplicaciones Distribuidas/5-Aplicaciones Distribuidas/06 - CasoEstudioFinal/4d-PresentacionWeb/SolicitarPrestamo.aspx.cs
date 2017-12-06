@@ -34,10 +34,10 @@ public partial class SolicitarPrestamo : System.Web.UI.Page
         try
         {
             //obtengo el cliente logueado
-            ServicioWeb.Cliente _unCliente = (ServicioWeb.Cliente)Session["Usuario"];
+            ServicioWCF.Cliente _unCliente = (ServicioWCF.Cliente)Session["Usuario"];
 
             //creo objeto prestamo 
-            ServicioWeb.Prestamo _unPrestamo = new ServicioWeb.Prestamo();
+            ServicioWCF.Prestamo _unPrestamo = new ServicioWCF.Prestamo();
             _unPrestamo.UnCliente= _unCliente;
             _unPrestamo.Fecha = DateTime.Now;
             _unPrestamo.Monto = Convert.ToDouble(TxtMonto.Text);
@@ -45,8 +45,7 @@ public partial class SolicitarPrestamo : System.Web.UI.Page
 
  
             //lo solicito
-            new ServicioWeb.MiServicio().AltaPrestamo(_unPrestamo);
-
+            new ServicioWCF.ServicioWCFClient().AltaPrestamo(_unPrestamo);
             //si llego aca - no hubo errores
             LblError.Text = "Prestamos Solicitado Correctamente";
             TxtMonto.Text = "";
@@ -65,10 +64,9 @@ public partial class SolicitarPrestamo : System.Web.UI.Page
         {
 
             //obtengo el cliente logueado
-            ServicioWeb.Cliente _unCliente = (ServicioWeb.Cliente)Session["Usuario"];
-
+            ServicioWCF.Cliente _unCliente = (ServicioWCF.Cliente)Session["Usuario"];
             //realizo listado
-            GVPrestamos.DataSource = new ServicioWeb.MiServicio().ListoPrestamosCliente(_unCliente);
+            GVPrestamos.DataSource = new ServicioWCF.ServicioWCFClient().ListoPrestamosCliente(_unCliente);
             GVPrestamos.DataBind();
         }
         catch (Exception ex)

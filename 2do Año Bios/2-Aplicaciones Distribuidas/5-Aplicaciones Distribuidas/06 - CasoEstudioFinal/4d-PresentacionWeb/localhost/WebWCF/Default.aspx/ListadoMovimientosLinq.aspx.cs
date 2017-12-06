@@ -5,11 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 using System.Xml;
-using ServicioWeb;
 using System.IO;
-
+using ServicioWCF;
 
 public partial class ListadoMovimientosLinq : System.Web.UI.Page
 {
@@ -21,10 +19,10 @@ public partial class ListadoMovimientosLinq : System.Web.UI.Page
             if (!IsPostBack)
             {
                 //obtengo el xml desde el WS
-                XmlNode _MiDoc = new ServicioWeb.MiServicio().ListaMovsDeCliente((Cliente)Session["Usuario"]);
+                string _MiDoc = new ServicioWCF.ServicioWCFClient().ListaMovsDeCliente((Cliente)Session["Usuario"]);
 
                 //creo y cargo con los datos el documento q me devolvio el WS- formato para Linq
-                System.Xml.Linq.XElement _documento = System.Xml.Linq.XElement.Parse(_MiDoc.OuterXml);
+                System.Xml.Linq.XElement _documento = System.Xml.Linq.XElement.Parse(_MiDoc);
                 Session["Documento"] = _documento;
             }
         }

@@ -13,8 +13,9 @@ public partial class ListadoCuentas : System.Web.UI.Page
         {
             try
             {
-                RpCuentas.DataSource = new ServicioWeb.MiServicio().ListaCuentasDeCliente((ServicioWeb.Cliente)Session["Usuario"]);
+                RpCuentas.DataSource = new ServicioWCF.ServicioWCFClient().ListaMovsDeCliente((ServicioWCF.Cliente)Session["Usuario"]);
                 RpCuentas.DataBind();
+
             }
             catch (Exception ex)
             {
@@ -30,8 +31,8 @@ public partial class ListadoCuentas : System.Web.UI.Page
         {
             try
             {
-                ServicioWeb.Cuenta _unaCuenta = new ServicioWeb.MiServicio().BuscarCuenta(Convert.ToInt32(((TextBox)(e.Item.Controls[1])).Text));
-                List<ServicioWeb.Movimiento> _miLista = new ServicioWeb.MiServicio().ListarMovimientosDeCuenta(_unaCuenta).ToList();
+                ServicioWCF.Cuenta _unaCuenta = new ServicioWCF.ServicioWCFClient().BuscarCuenta(Convert.ToInt32(((TextBox)(e.Item.Controls[1])).Text));
+                List<ServicioWCF.Movimiento> _miLista = new ServicioWCF.ServicioWCFClient().ListarMovimientosDeCuenta(_unaCuenta).ToList();
                 s.DataSource = _miLista;
                 s.DataBind();
             }

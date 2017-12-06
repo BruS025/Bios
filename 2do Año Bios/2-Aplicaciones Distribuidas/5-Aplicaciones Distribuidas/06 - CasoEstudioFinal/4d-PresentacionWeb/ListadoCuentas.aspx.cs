@@ -32,8 +32,8 @@ public partial class ListadoCuentas : System.Web.UI.Page
         {
             try
             {
-                ServicioWeb.Cuenta _unaCuenta = new ServicioWeb.MiServicio().BuscarCuenta(Convert.ToInt32(((TextBox)(e.Item.Controls[1])).Text));
-                List<ServicioWeb.Movimiento> _miLista = new ServicioWeb.MiServicio().ListarMovimientosDeCuenta(_unaCuenta).ToList();
+                ServicioWCF.Cuenta _unaCuenta = new ServicioWCFClient().BuscarCuenta(Convert.ToInt32(((TextBox)(e.Item.Controls[1])).Text));
+                List<ServicioWCF.Movimiento> _miLista = new ServicioWCFClient().ListarMovimientosDeCuenta(_unaCuenta).ToList();
                 s.DataSource = _miLista;
                 s.DataBind();
             }
