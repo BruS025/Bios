@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi primer HTML5</title>
+</head>
+
+<body>
+    <div class="Contenedor">
+        <header role="banner">
+            <div class "logo">
+                <img src="img\logo.png" alt="Logo">
+            </div>
+
+            <nav class="Navegacion" role="navigation">
+                <ul>
+                    <li>
+                        <a href="nosotros.html">Sobre nosotros</a>
+                    </li>
+                    <li>
+                        <a href="#Cursos">Cursos</a>
+                    </li>
+                    <li>
+                        <a href="https://www.google.com.uy/" target="_blank">Ir a google</a>
+                    </li>
+                    <li>
+                        <a href="#Noticias">ir a noticias</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class "Contenido Principal" role="main">
+            <section id="Cursos">
+                <h2>Nuestros Cursos</h2>
+                <div>
+                    <h3>HTML5</h3>
+                    <img src="img/html5.png" width="100">
+                    <a href="programa-html5.pdf" download>Descargar programa</a>
+                    <p>Ventajas de este curso</p>
+                    <ul>
+                        <!--esto es una lista sin orden-->
+                        <li> lo puedes tomar en linea
+                            <!--list item elemento de la lista-->
+                            <ul>
+                                <li>hijo</li>
+                                <li>hijo2</li>
+                            </ul>
+                        </li>
+                        <li>Puedes avanzar a tu ritmo</li>
+                        <li>Puedes preguntar tus dudas</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>CSS3</h3>
+                    <img src="img/css3.png" width="100">
+                </div>
+                <div>
+                    <h3>JavaScript</h3>
+                    <img src="img/js.jpg" width="100">
+                </div>
+            </section>
+
+            <section id="Noticias">
+                <h2>Ultimas noticias</h2>
+                <article role="article">
+                    <h3>Aprender a programar es importante</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, in id numquam doloribus earum sed labore amet dolore necessitatibus
+                        repudiandae sint sapiente rem nobis libero quis accusamus minus iusto incidunt!
+                    </p>
+                </article>
+            </section>
+        </main>
+        <!--termina el .contenedor principal es.contenedor porque es una clase-->
+        <aside role="complementary">
+            <h2>Proximos Cursos</h2>
+            <div>
+                <h3>PHP</h3>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora, voluptas suscipit. Natus aperiam officiis cum reiciendis
+                ea, magni beatae aut sit sequi veritatis nihil recusandae cupiditate quod temporibus dolore facere!
+            </div>
+            <div>
+                <h3>SQL</h3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dolor asperiores placeat sint, quo consequatur magnam eius?
+                Totam laboriosam dolorem expedita similique ipsa adipisci aliquid voluptas deserunt, nobis nemo et.
+            </div>
+        </aside>
+    </div>
+    <footer role="contentinfo">
+        <div class="Nosotros">
+            <h3>Sobre nuestros</h3>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos vitae laboriosam exercitationem ducimus facilis velit dolore
+            qui eius animi perferendis debitis quis unde earum id alias accusantium, adipisci, excepturi quae.
+        </div>
+        <div class="Menu">
+            <nav class="Navegacion" role="navigation">
+                Menu aqui
+            </nav>
+        </div>
+        <p>Todos los rerechos Recervados &copy;</p>
+    </footer>
+</body>
+
+</html>

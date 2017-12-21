@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Ventas>
+  <Cheque>
+    <Banco>	xxxxxx  </Banco>
+    <Numero> 999999  </Numero>
+    <Cuenta>   123456  </Cuenta>
+    <Cliente>   xxxxxx  </Cliente>
+    <Monto>   999999  </Monto>
+    <Fecha>	999999  </Fecha>
+  </Cheque>
+
+  <Cheque>
+    <Banco>	xxxxxx  </Banco>
+    <Numero> 999999  </Numero>
+    <Cuenta>   123456  </Cuenta>
+    <Cliente>   xxxxxx  </Cliente>
+    <Monto>   999999  </Monto>
+    <Fecha>	999999  </Fecha>
+  </Cheque>
+
+  <Cheque>
+    <Banco>	xxxxxx  </Banco>
+    <Numero> 999999  </Numero>
+    <Cuenta>   456789  </Cuenta>
+    <Cliente>   xxxxxx  </Cliente>
+    <Monto>   999999  </Monto>
+    <Fecha>	999999  </Fecha>
+  </Cheque>
+
+  <Cheque>
+    <Banco>	xxxxxx  </Banco>
+    <Numero> 999999  </Numero>
+    <Cuenta>   456789  </Cuenta>
+    <Cliente>   xxxxxx  </Cliente>
+    <Monto>   999999  </Monto>
+    <Fecha>	999999  </Fecha>
+  </Cheque>
+
+  <Cheque>
+    <Banco>	xxxxxx  </Banco>
+    <Numero> 999999  </Numero>
+    <Cuenta>   456789  </Cuenta>
+    <Cliente>   xxxxxx  </Cliente>
+    <Monto>   999999  </Monto>
+    <Fecha>	999999  </Fecha>
+  </Cheque>
+
+</Ventas>
