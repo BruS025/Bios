@@ -35,6 +35,4 @@ int numero =10;
 String str = String.valueof(numero);
 
 
-
-
-string str=String.valueof(numero);
+no podemos evaluar una variable double
