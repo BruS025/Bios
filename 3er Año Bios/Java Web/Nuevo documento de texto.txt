@@ -1,0 +1,38 @@
+al igual que c# es un lenguaje fuertemente tipado 
+los valores literales con coma son double y si los quiero float les pongo f al final
+
+cuando quiero obtener un objeto null uso la clase y no el dato en vez de int uso integer
+
+para definir una constante usamos la sintaxis public static final float PI = 3.14;
+el public static esta para poder usar desde otras clases y de facil acceso 
+
+si quiero compara String usamos X.equals(X)
+
+salida standar 
+		System.out.println();
+		System.out.print();
+
+Entrada standar
+		Sacanner teclado = new Scanner(System.in),
+		
+		String entrada;
+	
+		entrada = teclado.nextLine();
+
+Para poder usar esto tenemos que importar java.util.Scanner
+
+nextLine devuelve siempre String
+
+para convertir un string a un entero
+
+String str="12";
+
+int numero=Integer.parseInt(str);
+
+convertir un numero a string
+int numero =10;
+
+String str = String.valueof(numero);
+
+
+no podemos evaluar una variable double
