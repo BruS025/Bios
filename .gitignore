@@ -301,3 +301,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+/3er Año Bios/Java Web/EjemploArchivosTexto/nbproject/private/
+/3er Año Bios/Java Web/EjemploArchivosTexto/build/
