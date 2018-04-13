@@ -5,7 +5,9 @@
  */
 package ejemploinspectorclases;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
 
 /**
@@ -44,6 +46,81 @@ public class EjemploInspectorClases {
                System.out.println((Modifier.isPublic(a.getModifiers())? "+ " : "- ") + a.getName() + ": " + a.getType().getSimpleName());
            }
            
+           System.out.println("\n\nConstructores:\n");
+           
+           Constructor [] contructores = clase.getConstructors();
+           
+           String parametros;
+           
+           for(Constructor c : contructores)
+           {
+               parametros ="";
+               
+                for(Class p : c.getParameterTypes())
+                {
+                    if(parametros.length() > 0)
+                    {
+                        parametros += ", ";
+                    }
+                    
+                    parametros += p.getSimpleName();
+                }
+               System.out.println("+ " + clase.getSimpleName() + "(" + parametros + ")");
+           }
+           
+           System.out.println("\n\nMetodos: \n");
+           
+           Method [] Method = clase.getMethods();
+         
+           for(Method m : Method)
+           {
+               parametros ="";
+               
+                for(Class p : m.getParameterTypes())
+                {
+                    if(parametros.length() > 0)
+                    {
+                        parametros += ", ";
+                    }
+                    
+                    parametros += p.getSimpleName();
+                }
+               System.out.println("+ " + m.getName() + "(" + parametros +") :" + m.getReturnType().getSimpleName());
+           }
+           
+            System.out.println("\n\nMetodosDeclarados: \n");
+           
+           Method [] metodosDeclarados = clase.getDeclaredMethods();
+           
+           for(Method m : metodosDeclarados)
+           {
+               parametros ="";
+               
+                for(Class p : m.getParameterTypes())
+                {
+                    if(parametros.length() > 0)
+                    {
+                        parametros += ", ";
+                    }
+                    
+                    parametros += p.getSimpleName();
+                }
+               System.out.println((Modifier.isPublic(m.getModifiers())? "+ " : "- ") + m.getName() + "(" + parametros +")" + m.getReturnType().getSimpleName());
+           }
+           
+           System.out.println("\n\nPruebas con una instancia:\n");
+           
+           Object objeto = clase.newInstance();
+           
+           Field atributoEdad = clase.getField("edad");
+           
+           System.out.println("Edad antes de cumpler años: "+atributoEdad.get(objeto));
+           
+           Method metodoCumplirAnios = clase.getDeclaredMethod("CumplirAnios");
+           metodoCumplirAnios.setAccessible(true);
+           metodoCumplirAnios.invoke(objeto);
+           
+           System.out.println("Edad despues de cumplir años: "+ atributoEdad.get(objeto));
            
        }
        catch (ClassNotFoundException ex) 
