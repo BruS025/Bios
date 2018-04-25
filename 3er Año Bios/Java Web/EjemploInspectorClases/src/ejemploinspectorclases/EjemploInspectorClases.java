@@ -28,9 +28,9 @@ public class EjemploInspectorClases {
            System.out.println("Clase: "+ clase.getName());
            System.out.println("Clase: "+ clase.getSimpleName());
            
-           System.out.println("\n\nAtributos:\n");
-           
-           Field[] atributos = clase.getFields();
+       System.out.println("\n\nAtributos:\n");
+
+       Field[] atributos = clase.getFields();
            
            for (Field a : atributos)
            {
@@ -114,13 +114,13 @@ public class EjemploInspectorClases {
            
            Field atributoEdad = clase.getField("edad");
            
-           System.out.println("Edad antes de cumpler años: "+atributoEdad.get(objeto));
+           System.out.println("Edad antes de cumpler años: "+atributoEdad.getInt(objeto));
            
            Method metodoCumplirAnios = clase.getDeclaredMethod("CumplirAnios");
            metodoCumplirAnios.setAccessible(true);
            metodoCumplirAnios.invoke(objeto);
            
-           System.out.println("Edad despues de cumplir años: "+ atributoEdad.get(objeto));
+           System.out.println("Edad despues de cumplir años: "+ atributoEdad.getInt(objeto));
            
        }
        catch (ClassNotFoundException ex) 
