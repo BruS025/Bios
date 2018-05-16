@@ -4,21 +4,17 @@
         <servlet-name>UnContador</servlet-name>
         <servlet-class>Servlet.UnContador</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>OtroContador</servlet-name>
-        <servlet-class>Servlet.OtroContador</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>UnContador</servlet-name>
         <url-pattern>/UnContador</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>OtroContador</servlet-name>
-        <url-pattern>/OtroContador</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    <context-param>
+        <param-name>ValorInicialContador</param-name>
+        <param-value>1</param-value>
+    </context-param>
 </web-app>
