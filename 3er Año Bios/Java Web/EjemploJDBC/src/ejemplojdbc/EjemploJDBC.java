@@ -81,7 +81,8 @@ public class EjemploJDBC
     
     private static void EliminarEmpleado2()
     {
-        try(Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/EjemploJDBC","root","bruno"); CallableStatement consulta = conexion.prepareCall("{CALL EliminarEmpleado(?,?) }"))
+        try(Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/EjemploJDBC","root","bruno"); 
+                CallableStatement consulta = conexion.prepareCall("{CALL EliminarEmpleado(?,?) }"))
         {
             consulta.setLong(1,3);
             consulta.registerOutParameter(2,java.sql.Types.VARCHAR);
@@ -107,7 +108,8 @@ public class EjemploJDBC
     
     private static void ListarEmpeados2()
     {
-        try(Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/EjemploJDBC","root","bruno"); CallableStatement consulta = conexion.prepareCall("{ CALL ListarTodos() }"); ResultSet resultadoConsulta = consulta.executeQuery())
+        try(Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/EjemploJDBC","root","bruno"); 
+                CallableStatement consulta = conexion.prepareCall("{ CALL ListarTodos() }"); ResultSet resultadoConsulta = consulta.executeQuery())
         {
             System.out.println();
             
